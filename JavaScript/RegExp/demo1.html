@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>正则表达式</title>
+    <script src="demo.js"></script>
+    <style>
+        .centercon img {
+            width: 17px;
+            height: 17px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="centercon">
+        <h3>入学咨询→在线报名</h3>
+        <dl>
+            <dt>报名要求：</dt>
+            <dd>1、立志于在IT行业内发展；</dd>
+            <dd>2、年龄在18-28周岁内；</dd>
+            <dd>3、大专即以上学历，条件优秀者可放宽至高中及同等学历。</dd>
+            <dt>欢迎符合条件的有志青年报名，我们会尽快与您联系。</dt>
+        </dl>
+        <form name="form" action="demo2.html" method="post" onsubmit="return checkForm()">
+            <label for="name" class="cred">姓名：</label>
+            <input type="text" name="username" onfocus="focus_username()" onblur="blur_username()">
+            <span id="result_username"></span>
+            <br/>
+            <label for="sex">性别：</label>
+            <input type="radio" name="sex" value="男">&nbsp;男
+            <input type="radio" name="sex" value="女" checked="checked"> 女
+            <br/>
+            <label for="age" class="cred">年龄： </label>
+            <input type="text" name="userage" onfocus="focus_userage()" onblur="blur_userage()" />
+            <span id="result_userage"></span>
+            <br/>
+            <label for="cardno" class="cred">身份证号：</label>
+            <input type="text" name="ID" onfocus="focus_ID()" onblur="blur_ID()" />
+            <span id="result_ID"></span>
+            <br/>
+            <label for="job">职业状况：</label>
+            <input type="radio" name="job" value="在职">在职
+            <input type="radio" name="job" value="待业">待业
+            <input type="radio" name="job" value="学生">学生
+            <br/>
+            <label for="telphone" class="cred">固定电话：</label>
+            <input type="text" name="Telephone" onfocus="focus_telephone()" onblur="blur_telephone()" />
+            <span id="result_telephone"></span>
+            <br/>
+            <label for="mobliephone" class="cred">手机：</label>
+            <input type="text" name="Mobile" onfocus="focus_Mobile()" onblur="blur_Mobile()" />
+            <span id="result_Mobile"></span>
+            <br/>
+            <label for="qq" class="cred">QQ: </label>
+            <input type="text" name="qq" style="width:140px" onfocus="focus_qq()" onblur="blur_qq()">
+            <span id="result_qq"></span>
+            <br/>
+            <label for="email" class="cred">邮箱：</label>
+            <input type="text" name="email" onfocus="focus_email()" onblur="blur_email()" />
+            <span id="result_email"></span>
+            <br/>
+            <label for="address">现居住地：</label>
+            <input type="text" name="address" style="width:299px"><br/> 邮政编码：
+            <input type="text" name="code" style="width:120px"><br/> 留言： <input type="text" name="info" style="width:333px;height:99px"><br/>
+            <div style="padding-left: 146px;padding-bottom: 135px"><input type="submit" name="submit" style="width: 102px;height:25px" value="提交OK!"></div>
+        </form>
+    </div>
+</body>
+
+</html>

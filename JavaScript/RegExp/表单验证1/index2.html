@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>在线报名</title>
+	<link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="formcheck.js"></script>
+</head>
+<body>
+	<div class="main">
+		<div class="banner"><img src="images/bannerbg.jpg" alt=""></div>
+		<!-- banner end -->
+		<div class="nav">
+			<div class="search">
+				搜索：<input type="text"name="search"style="width:100px">
+			</div>
+			<div class="list">
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li><a href="#">走进华育</a></li>
+					<li><a href="#">新闻中心</a></li>
+					<li><a href="#">入学咨询</a></li>
+					<li><a href="#">招生问答</a></li>
+					<li><a href="#">就业广场</a></li>
+					<li><a href="#">校园文化</a></li>
+					<li><a href="#">技术交流</a></li>
+					<li><a href="#">招贤纳士</a></li>
+					<li><a href="#">学员交流</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- nav end -->
+		<div class="wrap"></div>
+		<div class="content">
+			<div class="leftcon">
+				<div class="ruxue">
+					<h2></h2>
+					<div class="text">
+						<dl>
+							<dt>入学咨询</dt>
+							<dd><a href="#">招生简章</a></dd>
+							<dd><a href="#">课程体系</a></dd>
+							<dd><a href="#">认证证书</a></dd>
+							<dd><a href="#">入学流程</a></dd>
+							<dd><a href="#">开班信息</a></dd>
+							<dd><a href="#">在线咨询</a></dd>
+							<dd ><a href="#" class="this">在线报名</a></dd>
+						</dl>
+					</div>
+				</div>
+				<div class="fuwu">
+					<h2>服务热线</h2>
+					<div class="tel"><a href="#"><img src="images/telpic.jpg" alt=""></a></div>
+				</div>
+				<div class="fenxiao">
+					<h2>华育国际分校</h2>
+					<div class="school">
+						<h3>华育国际总部</h3>
+						<h3>华育国际江苏分校总部</h3>
+						<h3>江苏华育国际IT俱乐部</h3>
+						<h3>华育国际扬州网络校区</h3>
+						<div class="wang">
+							<div class="one biao">
+								<ul>
+									<li>天安门软件</li>
+									<li>北太平庄</li>
+									<li>中关村</li>
+									<li>天安门软件</li>
+									<li>北太平庄</li>
+									<li>中关村</li>
+									<li>天安门软件</li>
+									<li>北太平庄</li>
+									<li>中关村</li>
+									<li>天安门软件</li>
+									<li>北太平庄</li>
+									<li>中关村</li>
+									<li>天安门软件</li>
+									<li>北太平庄</li>
+									<li>中关村</li>
+									<li>天安门软件</li>
+									<li>北太平庄</li>
+									<li>中关村</li>
+									<li>天安门软件</li>
+									<li>北太平庄</li>
+									<li>中关村</li>
+									<li>天安门软件</li>
+									<li>北太平庄</li>
+									<li>中关村</li>
+									<li>天安门软件</li>
+									<li>北太平庄</li>
+									<li>中关村</li>
+									<li>天安门软件</li>
+									<li>北太平庄</li>
+									<li>中关村</li>
+									<li>天安门软件</li>
+									<li>北太平庄</li>
+									<li>中关村</li>
+									<li>天安门软件</li>
+									<li>北太平庄</li>
+									<li>中关村</li>
+									<li>天安门软件</li>
+									<li>北太平庄</li>
+									<li>中关村</li>
+									<div class="clear"></div>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="centercon">
+				<h3>入学咨询→在线报名</h3>
+				<dl>
+					<dt>报名要求：</dt>
+					<dd>1、立志于在IT行业内发展；</dd>
+					<dd>2、年龄在18-28周岁内；</dd>
+					<dd>3、大专即以上学历，条件优秀者可放宽至高中及同等学历。</dd>
+					<dt>欢迎符合条件的有志青年报名，我们会尽快与您联系。</dt>
+				</dl>
+				<form name="form" action=" " method="post" onsubmit="return checkForm()">
+					<label for="name" class="cred">姓名：</label> 
+					<input type="text" name="username" onfocus="focus_username()" onblur="blur_username()" >
+					<span id="result_username"></span>
+					<br/>
+					<label for="sex">性别：</label> 
+					<input type="radio" name="sex" value="男">&nbsp;男
+					<input type="radio" name="sex" value="女" checked="checked">  女
+					<br/>
+					<label for="age" class="cred">年龄： </label>
+					<input type="text" name="userage" onfocus="focus_userage()" onblur="blur_userage()" />
+					<span id="result_userage"></span>
+					<br/>
+					<label for="cardno" class="cred">身份证号：</label>
+					<input type="text" name="ID" onfocus="focus_ID()" onblur="blur_ID()"/>
+					<span id="result_ID"></span>
+					<br/>
+					<label for="job">职业状况：</label> 
+					<input type="radio" name="job" value="在职">在职
+					<input type="radio" name="job" value="待业">待业
+					<input type="radio" name="job" value="学生">学生
+					<br/>
+					<label for="telphone" class="cred">固定电话：</label>
+					<input type="text" name="Tel" onfocus="focus_Tel()" onblur="blur_Tel()"/>
+					<span id="result_Tel"></span>
+					<br/>
+					<label for="mobliephone" class="cred">手机：</label>
+					<input type="text" name="Mobile" onfocus="focus_Mobile()" onblur="blur_Mobile()"/>
+					<span id="result_Mobile"></span>
+					<br/>
+					<label for="qq" class="cred">QQ: </label>   
+					<input type="text" name="qq" style="width:140px" onfocus="focus_qq()" onblur="blur_qq()">
+					<span id="result_qq"></span>
+					<br/>
+					<label for="email" class="cred">邮箱：</label> 
+					<input type="text" name="mail" onfocus="focus_mail()" onblur="blur_mail()"/>
+					<span id="result_mail"></span>
+					<br/>
+					<label for="address">现居住地：</label>
+					<input type="text"name="address" style="width:299px"><br/>
+					邮政编码：<input type="text"name="code" style="width:120px"><br/>
+					留言： <input type="text"name="info" style="width:333px;height:99px"><br/>
+					<div style="padding-left: 146px;padding-bottom: 135px"><input type="submit" name="submit"  style="width: 102px;height:25px"value="提交OK!" ></div>
+				</form>
+			</div>
+			<div class="rightcon">
+				<div class="kaiban">
+					<h3>开班信息</h3>
+					<div class="ban">
+						<ul>
+							<li class="three cu">班级</li>
+							<li class="four cu">开班日期</li>
+							<li class="five cu">状态</li>
+						</ul>
+						<ul>
+							<li class="three">名企就业班</li>
+							<li class="four">10月23日</li>
+							<li class="five">热招</li>
+						</ul>
+						<ul>
+							<li class="three">名企就业班</li>
+							<li class="four">10月23日</li>
+							<li class="five">热招</li>
+						</ul>
+						<ul>
+							<li class="three">名企就业班</li>
+							<li class="four">10月23日</li>
+							<li class="five">热招</li>
+						</ul>
+						<ul>
+							<li class="three">名企就业班</li>
+							<li class="four">10月23日</li>
+							<li class="five">热招</li>
+						</ul>
+						<ul>
+							<li class="three">名企就业班</li>
+							<li class="four">10月23日</li>
+							<li class="five">热招</li>
+						</ul>
+					</div>
+					<div class="qq"><img src="images/qqbg.jpg" alt=""><img src="images/qqbg.jpg" alt=""></div>
+					<div class="join"><img src="images/join1.jpg" alt=""><img src="images/join2.jpg" alt=""></div>
+				</div>
+				<div class="jiuye"><img src="images/jiuyebg.jpg" alt=""></div>
+				<div class="impro th2">
+					<h3>重要信息</h3>
+					<ul>
+						<li><a href="#">走进华育</a></li>
+						<li><a href="#">本校简介</a></li>
+						<li><a href="#">权威认证</a></li>
+						<li><a href="#">携手微软</a></li>
+						<li><a href="#">赛富融资</a></li>
+						<li><a href="#">就业方向</a></li>
+						<li><a href="#">政府支持</a></li>
+						<li><a href="#">校园环境</a></li>
+						<li><a href="#">招生简章</a></li>
+						<li><a href="#">课程体系</a></li>
+						<li><a href="#">师资力量</a></li>
+						<li><a href="#">网络设备</a></li>
+						<li><a href="#">入学进阶</a></li>
+						<li><a href="#">开班信息</a></li>
+						<li><a href="#">在线报名</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- wrap end -->
+		<div class="footer">
+			<dl>
+				<dt><img src="images/logo.jpg" alt=""></dt>
+				<dd>地址：中国▪南京▪中山路129号华育国际（金陵中学向南50米）</dd>
+				<dd><span class="six">全国长途免费热线：400-621-9896</span>  总部监督电话：400-628-0918</dd>
+				<dd><span class="seven">咨询专线：</span>025-84726399 84723905 
+					<span class="seven">人才预定：</span>025-84726499</dd>
+					<dd><span class="eight">Copyright&copy;2008-2009</span></dd>
+			</dl> 
+		</div>
+	</div>
+</body>
+</html>

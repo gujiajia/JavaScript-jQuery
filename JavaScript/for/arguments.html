@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // var r = prompt("输入圆的半径", "0");
+        // if (r != null) {
+        //     var square = r * r * Math.PI;
+        //     document.write("圆的面积为：" + square);
+        // } else {
+        //     alert("输入数据有误")
+        // }
+        //arguments 指所传参数的和(个数)
+        function area_circle(r, pi) {
+            if (arguments.length == 1) {
+                pi == 3.14;
+                return r * r * pi
+            } else {
+                return r * r * pi;
+            }
+        }
+        area_circle(5);
+        area_circle(5, 3.1415926);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

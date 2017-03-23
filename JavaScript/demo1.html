@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // function moveon() {
+        //     //通过弹出一个对话框来询问用户一个问题
+        //     var answer = confirm("准备好了吗?");
+        //     //单击"确认"按钮,浏览器会加载一个新页面w
+        //     if (answer) window.location = "http://taobao.com"
+        // }
+        // //在1分钟(6万毫秒)后执行定义的这个函数
+        // setTimeout(moveon, 60000);
+
+        // 在 document中的一个指定的区域输入调试的消息
+        // 如果document不存在这样的一个区域,则创建一个
+        function debug(msg) {
+            // 通过查看HTML元素的id属性来查找文档的调试部分
+            var log = document.getElementById("debuglog");
+            // 如果这个元素不存在,则创建一个
+            if (!log) {
+                /*Document.createElement() 方法用于创建指定的HTML元素,，或者，当指定未定义的元素时， 创建一个HTMLUnknownElement。(HTMLUnknownElement 代表着一个无效的HTML元素，派生自 HTMLElement 接口,，但它没有任何可用的附加属性或方法.)*/
+                log = document.createElement("div");
+                // 给这个元素的HTML id赋值
+                log.id = "debuglog";
+                // 定义初始内容,innerHTML 属性可以用来获取、修改指定元素内的所有标签和内容。
+                log.innerHTML = "<h1>Debug Log</h1>";
+                // 将其添加到文档的末尾
+                document.body.appendChild(log);
+            }
+            // 将消息包装在<pre>中,并添加至log中
+            // 创建<pre>标签
+            var pre = document.createElement("pre");
+            // 将msg包装在一个文本节点中
+            var text = document.createTextNode(msg);
+            // 将文本添加至<pre>
+            pre.appendChild(text);
+            // 将<pre>并添加至log中
+            log.appendChild(pre);
+        }
+    </script>
+</head>
+
+<body>
+
+
+</body>
+
+</html>

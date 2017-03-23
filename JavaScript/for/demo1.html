@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>判断一个字符串中出现次数最多的字符，统计这个次数</title>
+
+</head>
+
+<body>
+    <button onclick="btn()">点击</button>
+    <p id="p1"></p>
+    <p id="p2"></p>
+
+
+    <script>
+        var a = [0, 1, 2, 1, 2, 5, 5, 3, 1, 3, 5, 1, 2, 4, 0, 5] //给定数组  
+
+        var p = document.getElementById('p1');
+        var p2 = document.getElementById('p2');
+        var yuansu = new Array(); //储存元素  
+        var count = new Array(); //储存元素个数  
+        var m = 1;
+
+        // 去重并统计重复的个数  
+        function btn() {
+            for (i = 0; i < a.length; i++) {
+                for (x = i + 1; x < a.length; x++) {
+                    if (a[i] == a[x]) {
+                        a.splice(x, 1)
+                        m++;
+                    }
+                }
+                yuansu[i] = a[i];
+                count[i] = m;
+                m = 1;
+            }
+
+            //对count数组 复制一份在进行排序  
+
+            var coln = new Array();
+            for (s = 0; s < count.length; s++) {
+                coln[s] = count[s]
+            }
+
+            function abc(a, b) {
+                return a - b;
+            }
+            coln.sort(abc)
+
+            // 统计最多的元素 以及 有几个最多的  
+            var fcount = 0; //有几个最多的  
+            var first = "";
+            for (i = 0; i < count.length; i++) {
+                if (count[i] == coln[coln.length - 1]) {
+                    first += yuansu[i] + "出现最多,出现" + count[i] + "次" + "<br>"
+                    fcount++;
+                }
+
+            }
+
+            p.innerHTML = "最多的有" + fcount + "个";
+            p2.innerHTML = first;
+        }
+
+
+
+        //算出出现次数居第二位的元素及个数  
+        for (var i = 0; i < count.length; i++) {
+
+            if (count[i] == coln[coln.length - fcount]) {
+                //document.write("出现次数居第二位的元素是：" + yuansu[i] + "次数为：" + count[i] + "<br/>");  
+                second += "出现次数居第二位的元素是：" + yuansu[i] + "次数为：" + count[i] + "<br/>"
+            }
+        }
+    </script>
+</body>
+
+</html>

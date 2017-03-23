@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>canvas 绘制</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="500" height="500" style="background: #000">
+        您的浏览器不支持canvas功能!
+    </canvas>
+
+    <script>
+        var canvas = document.getElementById("canvas");
+        if (canvas.getContext) {
+            // 创建Context对象 一般2d, webgl是3d耗内存卡
+            var ctx = canvas.getContext("2d");
+            // 绘制开始
+            ctx.beginPath();
+            // // 绘制路径开始点
+            // ctx.moveTo(30, 30);
+            // // 绘制路径结束点
+            // ctx.lineTo(250, 470);
+            // ctx.moveTo(30, 30);
+            // ctx.lineTo(470, 30);
+            // ctx.moveTo(470, 30);
+            // ctx.lineTo(250, 470);
+            ctx.arc(200, 200, 100, 400, 2 * Math.PI, false);
+            // 线宽
+            ctx.lineWidth = 2;
+            // 颜色
+            ctx.strokeStyle = "#f00";
+            // 绘制(动作)
+            ctx.stroke();
+            // 绘制结束
+            ctx.closePath();
+        } else {
+            alert("不支持canvas功能!");
+        }
+    </script>
+</body>
+
+</html>
